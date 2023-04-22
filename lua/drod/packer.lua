@@ -29,7 +29,8 @@ return require('packer').startup(function(use)
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use {'nvim-treesitter/playground'}
     use {'tpope/vim-fugitive'}
-    use {'mbbill/undotree'}
-
-
+    use {'tpope/vim-commentary'}
+    use {'tpope/vim-surround'}
+    use {'tpope/vim-endwise'}
+    -- use {'mbbill/undotree'}
 end)
