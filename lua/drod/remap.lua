@@ -3,6 +3,9 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "Q", "gq")
 -- Makes ctrl-U less unweidly.
 vim.keymap.set("i", "<C-U>", "<C-G>u<C-U>")
+-- Managing buffers
+vim.keymap.set("n", "<leader><S-tab>", ":bp<CR>", {desc = "cycle (back) through open buffers"})
+vim.keymap.set("n", "<leader><tab>", ":bn<CR>", {desc = "cycle through open buffers"})
 
 -- neat remaps from the primeagen 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, {desc = "Open netrw explorer"})
@@ -19,3 +22,5 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+vim.keymap.set("n", "<leader>fml", ":CellularAutomaton make_it_rain<CR>", {desc = "for those special days"})

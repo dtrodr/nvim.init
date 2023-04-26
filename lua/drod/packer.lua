@@ -13,10 +13,7 @@ return require('packer').startup(function(use)
     }
     use({ 
         'rose-pine/neovim',
-        as = 'rose-pine',
-        --config = function()
-        --    vim.cmd('colorscheme rose-pine')
-        --end
+        as = 'rose-pine'
     })
     use ({
         'rafamadriz/neon',
@@ -26,11 +23,27 @@ return require('packer').startup(function(use)
             vim.cmd('colorscheme neon')
         end
     })
-    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+    use ({
+        'marko-cerovac/material.nvim',
+        config = function()
+            vim.g.material_style = "deep ocean"
+            -- vim.cmd('colorscheme material')
+        end
+    })
+    use {'nvim-treesitter/nvim-treesitter', 
+        run = ':TSUpdate',
+        prefer_git = true
+    }
     use {'nvim-treesitter/playground'}
     use {'tpope/vim-fugitive'}
     use {'tpope/vim-commentary'}
     use {'tpope/vim-surround'}
     use {'tpope/vim-endwise'}
     -- use {'mbbill/undotree'}
+    use { 'nvim-tree/nvim-web-devicons', opt = true }
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+    use {'Eandrju/cellular-automaton.nvim'}
 end)

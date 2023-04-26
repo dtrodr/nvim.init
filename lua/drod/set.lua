@@ -8,6 +8,16 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.wrap = false
 
+-- Makes tab-characters visible using a special character
+vim.opt.list = true
+vim.opt.listchars = {
+ --eol = "⏎",
+ tab = "␉·",
+ trail = "␠",
+ nbsp = "⎵"
+}
+-- eol:⏎,tab:␉·,trail:␠,nbsp:⎵
+
 vim.opt.incsearch = true
 
 vim.opt.scrolloff = 8
