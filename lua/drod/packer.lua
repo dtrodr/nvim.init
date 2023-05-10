@@ -11,7 +11,7 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-    use({ 
+    use({
         'rose-pine/neovim',
         as = 'rose-pine'
     })
@@ -31,19 +31,19 @@ return require('packer').startup(function(use)
         end
     })
     use {'nvim-treesitter/nvim-treesitter', 
-        run = ':TSUpdate',
-        prefer_git = true
+         run = ':TSUpdate',
+         prefer_git = true
     }
-    use {'nvim-treesitter/playground'}
+    -- use {'nvim-treesitter/playground'}
     use {'tpope/vim-fugitive'}
     use {'tpope/vim-commentary'}
     use {'tpope/vim-surround'}
     use {'tpope/vim-endwise'}
     -- use {'mbbill/undotree'}
-    use { 'nvim-tree/nvim-web-devicons', opt = true }
+    --use { 'nvim-tree/nvim-web-devicons', opt = true }
     use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
     use {'Eandrju/cellular-automaton.nvim'}
 end)
