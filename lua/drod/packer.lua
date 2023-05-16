@@ -21,8 +21,6 @@ return require('packer').startup(function(use)
     use { 'tpope/vim-commentary' }
     use { 'tpope/vim-surround' }
     use { 'tpope/vim-endwise' }
-    -- use {'mbbill/undotree'}
-    -- use { 'nvim-tree/nvim-web-devicons', opt = true }
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -50,6 +48,8 @@ return require('packer').startup(function(use)
         }
     }
 
+    use { 'alexghergh/nvim-tmux-navigation'}
+
     -- Colorschemes
     use({
         'rose-pine/neovim',
@@ -60,7 +60,7 @@ return require('packer').startup(function(use)
         as = 'neon',
         config = function()
             vim.g.neon_style = 'dark'
-            vim.cmd('colorscheme neon')
+            --vim.cmd('colorscheme neon')
         end
     })
     use({
@@ -74,4 +74,6 @@ return require('packer').startup(function(use)
     use { "tomasiser/vim-code-dark" }
     use { "rockerBOO/boo-colorscheme-nvim", as = "boo" }
     use { "shaunsingh/nord.nvim" }
+    use { "ellisonleao/gruvbox.nvim" }
+    use { "folke/tokyonight.nvim" }
 end)

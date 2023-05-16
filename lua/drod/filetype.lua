@@ -3,6 +3,9 @@ vim.filetype.add({
         sv09 = systemverilog,
         vg = verilog,
         ['do'] = 'tcl',
-    }
+    },
+    pattern = {
+        [".*bashrc.*"] = 'bash'
+    },
 })
 

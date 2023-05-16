@@ -9,5 +9,6 @@ vim.filetype.add({
     pattern = {
         -- Matching model config files
         [".*verif/[%w_]+/[%w_]+.cfg"] = 'yaml',
+        [".*crif2?.xml"] = 'nosyntax',
     }
 })
