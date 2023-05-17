@@ -9,3 +9,6 @@ require'nvim-tmux-navigation'.setup {
         next = "<C-Space>",
     }
 }
+-- require'telescope-tmux.nvim'.setup{}
+
+

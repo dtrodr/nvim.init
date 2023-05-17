@@ -26,8 +26,22 @@ vim.keymap.set(
     {desc = "Replace word under cursor in file"}
 )
 
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("source")
-end)
+-- Managing terminal
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", {desc = "Allow escape to exit terminal mode"})
+vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]] )
+vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]] )
+vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]] )
+vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]] )
+vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]] )
+vim.keymap.set("n", "<leader>tt", ":ToggleTerm direction=horizontal<CR>", { desc = "Toggle term on bottom" } )
+vim.keymap.set("n", "<leader>tf", ":ToggleTerm direction=float<CR>", { desc = "Toggle float term" } )
+--
+-- Reload
+vim.keymap.set("n", "<leader><leader>", 
+    function()
+        vim.cmd("source")
+    end,
+    {desc = "source current buffer"}
+)
 
 vim.keymap.set("n", "<leader>fml", ":CellularAutomaton make_it_rain<CR>", {desc = "for those special days"})

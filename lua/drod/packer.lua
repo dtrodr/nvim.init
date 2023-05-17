@@ -48,7 +48,10 @@ return require('packer').startup(function(use)
         }
     }
 
-    use { 'alexghergh/nvim-tmux-navigation'}
+    use { 'alexghergh/nvim-tmux-navigation' }
+    -- use { 'camgraff/telescope-tmux.nvim' }
+    use { 'akinsho/toggleterm.nvim' }
+
 
     -- Colorschemes
     use({
