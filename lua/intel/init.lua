@@ -1,1 +1,0 @@
-require("intel.filetype")
