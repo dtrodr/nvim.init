@@ -1,10 +1,6 @@
 require("tokyonight").setup({
   -- use the night style
   style = "night",
-  -- disable italic for functions
-  -- styles = {
-  --   functions = {}
-  -- },
   on_colors = function(colors)
     -- Brighter comments than "#636da6"
     colors.comment = "#8890bb"

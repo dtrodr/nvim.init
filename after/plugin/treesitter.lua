@@ -42,3 +42,11 @@ require'nvim-treesitter.configs'.setup {
     -- additional_vim_regex_highlighting = false,
   },
 }
+-- local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+-- parser_config.verilog= {
+--   install_info = {
+--     url = "", -- local path or git repo
+--     files = {"src/parser.c"}, -- note that some parsers also require src/scanner.c or src/scanner.cc
+--   },
+-- }
+-- print(vim.inspect(parser_config))
